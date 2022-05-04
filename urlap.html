@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/alap.css">
+</head>
+<body>
+    <canvas id="rajzvaszon" width="300" height="200"></canvas>
+    <script>
+        var cnv = document.getElementById('rajzvaszon');
+        var ctx = cnv.getContext('2d');
+        rajzvaszon.style.border = "black 5px solid";
+        ctx.fillStyle = 'red';
+        ctx.fillRect(0,0,300,200);
+        ctx.moveTo(0,0);
+        ctx.lineTo(150,100);
+        ctx.lineTo(300,0);
+        ctx.stroke();
+    </script>
+    <form action="mailto:gipszjakab@mailinator.com">
+        <fieldset>
+            <legend>A film adatai</legend>
+            <label for="hun_title">Cím (magyarul)</label><br>
+            <input id="hun_title" type="text" size="50"><br>
+
+            <label for="eng_title">Cím (angolul)</label><br>
+            <input id="eng_title" type="text" size="50"><br>
+
+            <label for="imdb">Webcím</label><br>
+            <input id="imdb" type="text" size="50" value="imdb.com/"><br>
+
+            <label for="story">Rövid cselekmény</label><br>
+            <textarea id="story" cols="60" rows="10" placeholder="Röviden írd ide a tartalmat"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Értékelés</legend>
+            <p>A Te értékelésed 5-ös skálán</p>
+            <input name="rating" id="egy" type="radio"><label for="egy">1</label>
+            <input name="rating" id="kettő" type="radio"><label for="kettő">2</label>
+            <input name="rating" id="harom" type="radio"><label for="harom">3</label>
+            <input name="rating" id="negy" type="radio"><label for="negy">4</label>
+            <input name="rating" id="ot" type="radio"><label for="ot">5</label>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Az adataid</legend>
+            <label for="name">Név</label><br>
+            <input id="name" type="text" size="50"><br>
+            
+            <label for="email">Email</label><br>
+            <input id="email" type="email" size="50"><br>
+            
+            <input id="news" type="checkbox"><label for="news">Feliratkozom!</label>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Adatok elküldése</legend>
+            <input type="submit" value="Elküld">
+            <input type="reset" value="Töröl">
+        </fieldset>
+    </form>
+</body>
+</html>
